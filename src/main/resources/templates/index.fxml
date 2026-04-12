@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="436.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gm.tareas.contoller.IndexControlador">
+   <children>
+      <AnchorPane layoutX="12.0" layoutY="88.0" prefHeight="200.0" prefWidth="257.0">
+         <children>
+            <Label layoutX="9.0" layoutY="53.0" text="Tarea">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="93.0" text="Responsable">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="138.0" text="Estado">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTarea" layoutX="88.0" layoutY="48.0" />
+            <TextField fx:id="txtResponsable" layoutX="88.0" layoutY="89.0" prefHeight="23.0" prefWidth="149.0">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtEstado" layoutX="88.0" layoutY="133.0" />
+         </children></AnchorPane>
+      <TableView fx:id="tbTarea" layoutX="281.0" layoutY="71.0" onMouseClicked="#cargarDatosFormulario" prefHeight="217.0" prefWidth="371.0" AnchorPane.rightAnchor="48.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="30.0" text="ID" />
+          <TableColumn fx:id="tareaColumn" minWidth="100.0" prefWidth="150.0" text="Tarea" />
+            <TableColumn fx:id="responsableColumn" minWidth="100.0" prefWidth="110.0" text="Responsable" />
+            <TableColumn fx:id="estadoColumn" prefWidth="75.0" text="Estado" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="6.0" layoutY="340.0" prefHeight="71.0" prefWidth="689.0">
+         <children>
+            <Button fx:id="btnAgregar" layoutX="175.0" layoutY="24.0" mnemonicParsing="false" onAction="#agregarTarea" style="-fx-background-color: #36C944;" text="Agregar">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModificar" layoutX="253.0" layoutY="23.0" mnemonicParsing="false" onAction="#modificarTarea" style="-fx-background-color: #36C944;" text="Modificar" />
+            <Button fx:id="btnEliminar" layoutX="329.0" layoutY="23.0" mnemonicParsing="false" onAction="#eliminarTarea" style="-fx-background-color: #F74545;" text="Eliminar" />
+            <Button fx:id="btnLimpiarForm" layoutX="399.0" layoutY="23.0" mnemonicParsing="false" onAction="#limpiarFormulario" style="-fx-background-color: #FFD900;" text="Limpiar Formulario" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="255.0" layoutY="26.0" text="Sistemas de Tareas" textAlignment="CENTER">
+         <font>
+            <Font name="Cascadia Mono Regular" size="18.0" />
+         </font>
+      </Label>
+        </children>
+</AnchorPane>
